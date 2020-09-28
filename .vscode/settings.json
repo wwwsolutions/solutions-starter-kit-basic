@@ -18,5 +18,5 @@
     "eslint.validate": [
         "javascript"
     ],
-    "files.autoSaveDelay": 500
+    "files.autoSaveDelay": 500,
 }
