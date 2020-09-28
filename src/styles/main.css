@@ -1,0 +1,15 @@
+/* OPTIONAL 
+
+gulp task: sprites-generator (build-utils/gulp/tasks/task-sprites-generator)
+
+description:
+    Generates sprites and png to use as inline svg.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* @import "generated/_sprite"; */
+
+@import "normalize.css";
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_global";
+/* @import "modules/_module-name"; */
