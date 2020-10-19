@@ -23,3 +23,15 @@
     display: table;
   }
 }
+
+@define-mixin supportsGrid {
+  @supports (grid-area: auto) {
+    @mixin-content;
+  }
+}
+
+@define-mixin supportsBgClip {
+  @supports (-webkit-background-clip: text) {
+    @mixin-content;
+  }
+}
