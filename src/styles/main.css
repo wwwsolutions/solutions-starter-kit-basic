@@ -1,22 +1,47 @@
-/* OPTIONAL 
+/* OPTIONAL GENERATORS
 
 gulp task: sprites-generator (build-utils/gulp/tasks/task-sprites-generator)
 
 description:
     Generates sprites and png to use as inline svg.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* @import "generated/_sprite"; */
+usage:
+    @import "generated/_sprite"; 
 
-@import "normalize.css";
-/* 
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* OPTIONAL RESETS 
+
+description:
+    Apply css reset with normalize.css
+
+source: 
+    https://necolas.github.io/normalize.css/    
+
+usage:    
+    @import "normalize.css";
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* OPTIONAL FONTS
+
+description:
+    Use Google fonts
+
+source: 
+    https://fonts.google.com/
+
+usage:    
+    @import url(//fonts.googleapis.com/css?family=Roboto+Baskerville:400,400italic,700);
+    @import url(//fonts.googleapis.com/css?family=Source+Code+Pro:400,400italic,700,700italic);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url(//fonts.googleapis.com/css?family=Roboto+Baskerville:400,400italic,700);
+
+/* base */
 @import "base/_variables";
 @import "base/_mixins";
 @import "base/_global";
-*/
 
-/* 
-@import "modules/_module-name"; 
-*/
-
+/* modules */
 @import "modules/_markdown";
