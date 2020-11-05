@@ -67,6 +67,6 @@
     ],
     "number-leading-zero": null,
     "length-zero-no-unit": null,
-    "unit-allowed-list": ["em", "rem", "s", "px", "%", "vw", "vh", "ms", "fr", "deg", "x", "dpi"],
+    "unit-allowed-list": ["vw", "vh", "vmax", "vmin", "em", "rem", "s", "px", "%", "ms", "fr", "deg", "x", "dpi"],
   }
 }
