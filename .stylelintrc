@@ -27,6 +27,8 @@
       {
         "ignoreAtRules": [
           "/^define-/",
+          "if",
+          "else",
           "use",
           "util",
           "mixin",
