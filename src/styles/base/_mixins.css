@@ -1,3 +1,111 @@
+/* 
+
+https://github.com/postcss/postcss-mixins 
+https://www.npmjs.com/package/postcss-conditionals
+
+*/
+
+/* helpers */
+
+/* 
+  Dimensions Toolkit
+
+*****************************************/
+@define-mixin fullscreen {
+  min-height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@define-mixin box $width, $height: $width {
+  width: $(width);
+  height: $(height);
+}
+
+@define-mixin noMargin {
+  margin: 0;
+}
+
+@define-mixin noPadding {
+  padding: 0;
+}
+
+@define-mixin noMarginNoPadding {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Flexbox Toolkit
+
+*****************************************/
+
+@define-mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@define-mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@define-mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@define-mixin flexVerticalCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@define-mixin flexSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@define-mixin flexVerticalSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* 
+  Positioning Toolkit
+
+*****************************************/
+@define-mixin centerText {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 
+  Shadows Toolkit
+
+*****************************************/
+@define-mixin shadow {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+  Borders Toolkit
+
+*****************************************/
+@define-mixin roundCorners {
+  border-radius: 0.25em;
+}
+
+/* 
+  Floats Toolkit
+
+*****************************************/
 @define-mixin clearfix {
   &::after {
     content: "";
@@ -6,6 +114,33 @@
   }
 }
 
+/* 
+  Backgrounds Toolkit
+
+*****************************************/
+@define-mixin coverBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 
+  Pseudo Elements Toolkit
+
+*****************************************/
+@define-mixin pseudo $width: 100%, $height: 100%, $display: inline-block,
+  $pos: absolute, $content: "" {
+  content: $(content);
+  display: $(display);
+  position: $(pos);
+  width: $(width);
+  height: $(height);
+}
+
+/* 
+  Supports Toolkit
+
+*****************************************/
 @define-mixin supportsGrid {
   @supports (grid-area: auto) {
     @mixin-content;
@@ -18,7 +153,9 @@
   }
 }
 
-/* media queries === mobile first */
+/* Responsiveness / Media Queries Toolkit */
+
+/* mobile first approach */
 @define-mixin atSmall {
   @media (min-width: 530px) {
     @mixin-content;
@@ -36,3 +173,33 @@
     @mixin-content;
   }
 }
+
+/* desktop first approach 
+
+  @define-mixin atSmall {
+    @media (max-width: 530px) {
+      @mixin-content;
+    }
+  }
+
+  @define-mixin atMedium {
+    @media (max-width: 800px) {
+      @mixin-content;
+    }
+  }
+
+  @define-mixin atLarge {
+    @media (max-width: 1010px) {
+      @mixin-content;
+    }
+  }
+
+*/
+
+/* 
+  Fonts Toolkit
+
+  use 'Font Magician' postcss plugin:
+  https://github.com/jonathantneal/postcss-font-magician
+
+*****************************************/

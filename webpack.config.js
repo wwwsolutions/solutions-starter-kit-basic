@@ -15,8 +15,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // CONFIG
 const postCSSPlugins = [
   require('postcss-import'),
+  require('postcss-conditionals'),
   require('postcss-mixins'),
   require('postcss-simple-vars'),
+  require('postcss-color-function'),
   require('postcss-nested'),
   require('postcss-hexrgba'),
   require('autoprefixer'),
